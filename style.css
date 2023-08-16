@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    background-color: red;
+    overflow: hidden;
+}
+.gamecontainer{
+    background-image: url(images/bg.jpg);
+    background-position: bottom;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.skater{
+    background-image: url(images/bgremove.png);
+    width: 233px;
+    height: 244px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    
+}
+
+.obstacle{
+    width: 150px;
+    height: 185px;
+    background-image: url(images/obstacle.png);
+    background-size:100px;
+    background-repeat: no-repeat;
+    position:absolute;
+    bottom: 0;
+    left: 900px;
+}
+
+.animateskater{
+    animation: skater 1.0s linear;
+
+}
+
+@keyframes skater{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 320px;
+    }
+    100%{ 
+        bottom: 100;
+    }
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver{
+    visibility : hidden;
+}
+
+@keyframes obstacleAni{
+    0%{
+        left:100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
